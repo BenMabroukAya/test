@@ -37,6 +37,12 @@ body {
   margin: 20px 0;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   border-radius: 8px;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.section:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
 }
 
 .section h1,
@@ -58,6 +64,11 @@ ul li {
   margin: 10px 0;
   padding: 10px;
   border-radius: 8px;
+  transition: background 0.3s;
+}
+
+ul li:hover {
+  background: #d0d0d0;
 }
 
 .link-container {
@@ -71,11 +82,12 @@ ul li {
   color: #fff;
   text-decoration: none;
   border-radius: 8px;
-  transition: background-color 0.3s;
+  transition: background-color 0.3s, transform 0.3s;
 }
 
 .calculator-link:hover {
   background-color: #005bb5;
+  transform: translateY(-2px);
 }
 
 .footer {
@@ -85,4 +97,26 @@ ul li {
   width: 100%;
   margin-top: 20px;
   border-top: 1px solid #e7e7e7;
+  box-shadow: 0 -4px 8px rgba(0, 0, 0, 0.1);
+}
+
+input[type="number"] {
+  padding: 10px;
+  margin: 5px 0;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  width: 100%;
+  box-sizing: border-box;
+  transition: border-color 0.3s;
+}
+
+input[type="number"]:focus {
+  border-color: #0070f3;
+  outline: none;
+}
+
+label {
+  display: block;
+  margin-bottom: 10px;
+  font-weight: bold;
 }
